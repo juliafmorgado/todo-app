@@ -7,6 +7,9 @@ app.get('/', (req, res) => {
 })
 
 
+app.post('/task', (req, res) => {
+    console.log('Heloooooo');
+})
 
 
 app.listen(3000, function() {
