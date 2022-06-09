@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
+const MongoClient = require('mongodb').MongoClient
 
 
 app.use(bodyParser.urlencoded({ extended: true}))
@@ -12,7 +13,7 @@ app.get('/', (req, res) => {
 
 
 app.post('/tasks', (req, res) => {
-    console.log('Heloooooo');
+    console.log(req.body);
 })
 
 
