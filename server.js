@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.post('/task', (req, res) => {
+app.post('/tasks', (req, res) => {
     console.log('Heloooooo');
 })
 
