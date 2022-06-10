@@ -13,10 +13,14 @@ app.get('/', (req, res) => {
 
 
 app.post('/tasks', (req, res) => {
-    console.log(req.body);
+    db.collection('l')
 })
 
 
 app.listen(3000, function() {
     console.log('listening');
+})
+
+MongoClient.connect('mongodb-connection-string', (err, client) => {
+
 })
