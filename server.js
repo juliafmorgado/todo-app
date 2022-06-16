@@ -21,7 +21,11 @@ app.get('/', (req, res) => {
 
 
 app.post('/tasks', (req, res) => {
-    console.log(req.body)
+    tasksCollection.insertOne(req.body)
+    .then(result => {
+        console.log(result);
+    })
+    .catch(error => console.error(error))
 })
 
 
