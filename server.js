@@ -13,18 +13,16 @@ MongoClient.connect(connectionString)
     const db = client.db('to-do-app')
     const tasksCollection = db.collection('tasks')
 
-app.set('view engine', 'ejs')
-
 app.use(bodyParser.urlencoded({ extended: true}))
-
+app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
     const cursor = db.collection('tasks').find().toArray()
     .then(results => {
-        console.log(results)
+        res.render('index.ejs', { tasks: results})
     })
     .catch(error => console.error(error))
-    res.render('index.ejs', {})
+    
 })
 
 
