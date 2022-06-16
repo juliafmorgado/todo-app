@@ -38,27 +38,30 @@ app.post('/tasks', (req, res) => {
 })
 
 app.put('/tasks', (req, res) => {
-    console.log(req.body);
+    tasksCollection.findOneAndUpdate(
+        query,
+        {
+            $set: {
+                task: req.body.task
+            }
+        },
+        {
+            upsert: true
+        }
+    )
+    .then(result => {
+        console.log(result);
+    })
+    .catch(error => console.error(error))
 })
 
 app.listen(3000, function() {
     console.log('listening');
 })
 
+
+
 })
     .catch(error => console.error(error))
 
 
-tasksCollection.findOneAndUpdate(
-    query,
-    {
-        $set: {
-            task: req.body.task
-        }
-    },
-    {
-        upsert: true
-    }
-)
-.then(result => {})
-.catch(error => console.error(error))
