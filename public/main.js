@@ -5,7 +5,7 @@ update.addEventListener('click', _ => {
         method: 'put',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({
-            task: 'Do dishes'
+            task: 'Take dog out'
         })
     })
 })
