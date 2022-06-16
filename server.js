@@ -22,6 +22,6 @@ app.listen(3000, function() {
     console.log('listening');
 })
 
-MongoClient.connect('mongodb-connection-string', (err, client) => {
+MongoClient.connect(connectionString, (err, client) => {
 
 })
