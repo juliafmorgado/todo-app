@@ -46,3 +46,10 @@ app.listen(3000, function() {
 
 })
     .catch(error => console.error(error))
+
+
+tasksCollection.findOneAndUpdate(
+
+)
+.then(result => {})
+.catch(error => console.error(error))
