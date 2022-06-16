@@ -23,5 +23,6 @@ app.listen(3000, function() {
 })
 
 MongoClient.connect(connectionString, (err, client) => {
-
+    if (err) return console.error(err)
+    console.log('Connected to Database')
 })
