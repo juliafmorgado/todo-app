@@ -17,7 +17,10 @@ MongoClient.connect(connectionString)
 
 app.get('/', (req, res) => {
     const cursor = db.collection('tasks').find().toArray()
-    console.log(cursor);
+    .then(results => {
+        console.log(results)
+    })
+    .catch(error => console.error(error))
     res.sendFile(__dirname + '/index.html')
 })
 
