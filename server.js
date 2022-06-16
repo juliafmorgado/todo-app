@@ -36,6 +36,9 @@ app.post('/tasks', (req, res) => {
     .catch(error => console.error(error))
 })
 
+app.put('/tasks', (req, res) => {
+    console.log(req.body);
+})
 
 app.listen(3000, function() {
     console.log('listening');
