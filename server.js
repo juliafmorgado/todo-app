@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
         console.log(results)
     })
     .catch(error => console.error(error))
-    res.sendFile(__dirname + '/index.html')
+    res.render('index.ejs', {})
 })
 
 
