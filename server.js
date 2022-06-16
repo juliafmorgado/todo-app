@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const req = require('express/lib/request')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const connectionString = 'mongodb+srv://kaka:3887@cluster0.eomzavh.mongodb.net/?retryWrites=true&w=majority'
@@ -49,7 +50,15 @@ app.listen(3000, function() {
 
 
 tasksCollection.findOneAndUpdate(
-
+    query,
+    {
+        $set: {
+            task: req.body.task
+        }
+    },
+    {
+        upsert: true
+    }
 )
 .then(result => {})
 .catch(error => console.error(error))
