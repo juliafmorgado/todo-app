@@ -22,7 +22,9 @@ app.listen(3000, function() {
     console.log('listening');
 })
 
-MongoClient.connect(connectionString, (err, client) => {
+MongoClient.connect(connectionString, {
+    useUnifiedTopology: true
+}, (err, client) => {
     if (err) return console.error(err)
     console.log('Connected to Database')
 })
