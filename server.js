@@ -22,7 +22,8 @@ app.listen(3000, function() {
     console.log('listening');
 })
 
-MongoClient.connect(connectionString, (err, client) => {
-    if (err) return console.error(err)
-    console.log('Connected to Database')
+MongoClient.connect(connectionString)
+    .then(client => {
+    console.log('connected to database')
 })
+    .catch(error => console.error(error))
