@@ -11,6 +11,7 @@ MongoClient.connect(connectionString)
     .then(client => {
     console.log('connected to database')
     const db = client.db('to-do-app')
+    const tasksCollection = db.collection('tasks')
     app.use(bodyParser.urlencoded({ extended: true}))
 
 
