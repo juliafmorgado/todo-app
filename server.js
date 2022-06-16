@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 
 
 app.post('/tasks', (req, res) => {
-    console.log('adding tasksssss')
+    console.log(req.body)
 })
 
 
