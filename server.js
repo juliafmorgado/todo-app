@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 
 
 app.post('/tasks', (req, res) => {
-    db.collection('l')
+    console.log('adding tasksssss')
 })
 
 
@@ -22,9 +22,7 @@ app.listen(3000, function() {
     console.log('listening');
 })
 
-MongoClient.connect(connectionString, {
-    useUnifiedTopology: true
-}, (err, client) => {
+MongoClient.connect(connectionString, (err, client) => {
     if (err) return console.error(err)
     console.log('Connected to Database')
 })
