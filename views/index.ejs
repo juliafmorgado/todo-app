@@ -17,9 +17,10 @@
 
     <h2>Tasks</h2>
     <ul class="tasks">
-        <% for(var i=0; i< tasks.length; i++){%>
+        <% for(let i=0; i< tasks.length; i++){%>
             <li class='task'>
                 <span><%= tasks[i].task%></span>
+                <i class="fa fa-trash"></i>
             </li>
         <% } %>
     </ul>
