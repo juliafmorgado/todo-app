@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
 app.post('/tasks', (req, res) => {
     tasksCollection.insertOne(req.body)
     .then(result => {
+        console.log('task added')
         res.redirect('/')
     })
     .catch(error => console.error(error))
