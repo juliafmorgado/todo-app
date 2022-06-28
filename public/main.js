@@ -18,4 +18,13 @@ update.addEventListener('click', _ => {
 
 async function deleteTask(){
     const sTask = this.parentNode.childNodes[1].innerText
+    try{
+        const res = await fetch('deleteTask', {
+            method: 'delete',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                'taskS': sTask
+            })
+        })
+    }
 }
