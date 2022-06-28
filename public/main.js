@@ -31,6 +31,6 @@ async function deleteTask(){
         location.reload()
     }
     catch(err){
-        console.log(err)  
+        console.log(err)
     }
 }
