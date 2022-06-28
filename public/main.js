@@ -26,5 +26,8 @@ async function deleteTask(){
                 'taskS': sTask
             })
         })
+        const data = await res.json()
+        console.log(data)
+        location.reload()
     }
 }

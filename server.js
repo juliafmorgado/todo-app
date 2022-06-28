@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const req = require('express/lib/request')
+const { response } = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const connectionString = 'mongodb+srv://kaka:3887@cluster0.eomzavh.mongodb.net/?retryWrites=true&w=majority'
@@ -51,6 +52,16 @@ app.put('/tasks', (req, res) => {
     )
     .then(result => {
         console.log(result);
+    })
+    .catch(error => console.error(error))
+})
+
+app.delete('deleteTask', (req, res) => {
+    console.log(req)
+    db.collection('tasks').deleteOne({task: req.body.taskS})
+    .then(result => {
+        console.log('Task deleted')
+        response.json('Task deleted')
     })
     .catch(error => console.error(error))
 })
