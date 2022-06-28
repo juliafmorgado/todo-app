@@ -1,4 +1,5 @@
 const update = document.querySelector('#update-button')
+const deleteText = document.querySelectorAll('.fa-trash')
 
 update.addEventListener('click', _ => {
     fetch('/tasks', {
