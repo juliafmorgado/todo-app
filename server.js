@@ -25,7 +25,6 @@ app.get('/', (req, res) => {
         res.render('index.ejs', { tasks: results})
     })
     .catch(error => console.error(error))
-    
 })
 
 
@@ -56,10 +55,9 @@ app.put('/tasks', (req, res) => {
     .catch(error => console.error(error))
 })
 
-app.listen(3000, function() {
+app.listen(3000, () => {
     console.log('listening');
 })
-
 
 
 })
