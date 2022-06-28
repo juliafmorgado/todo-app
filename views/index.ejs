@@ -5,32 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c59bf71257.js" crossorigin="anonymous"></script>
-    <title>Gratitude Log</title>
+    <title>To Do</title>
 </head>
 <body>
     
-    <h1>Gratitude Log</h1>
+    <div class="box" id="heading">
+        <h1>Today</h1>
+    </div>
+
+    <div class="box">
+        <ul class="tasks">
+            <% for(let i=0; i< tasks.length; i++){%>
+                <li class='task'>
+                    <span><%= tasks[i].task%></span>
+                    <i class="fa fa-trash"></i>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+
+
 
     <form action="/tasks" method="post">
         <input type="text" placeholder="task" name="task">
         <button type="submit">Add</button>
     </form>
 
-    <h2>Tasks</h2>
-    <ul class="tasks">
-        <% for(let i=0; i< tasks.length; i++){%>
-            <li class='task'>
-                <span><%= tasks[i].task%></span>
-                <i class="fa fa-trash"></i>
-            </li>
-        <% } %>
-    </ul>
 
-    <div>
-        <h2>Add a task</h2>
-        <p>Be grateful</p>
-        <button id="update-button">Update quote</button>
-    </div>
+    <footer>Copyright 2022 JFM</footer>
 
 
     <script src="/main.js"></script>
