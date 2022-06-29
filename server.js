@@ -66,6 +66,7 @@ app.delete('deleteTask', (req, res) => {
     .catch(error => console.error)
 })
 
+//App listening on the port below
 app.listen(3000, () => {
     console.log('listening');
 })
