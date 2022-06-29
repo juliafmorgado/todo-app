@@ -1,5 +1,5 @@
 const update = document.querySelector('#update-button')
-const deleteText = document.querySelectorAll('.fa-trash')
+const deleteButton = document.querySelector('#delete-button')
 
 Array.from(deleteText).forEach((element) => {
     element.addEventListener('click', deleteTask)
