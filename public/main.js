@@ -1,4 +1,3 @@
-const update = document.querySelector('#update-button')
 const deleteButton = document.querySelector('#delete-button')
 
 Array.from(deleteText).forEach((element) => {
@@ -6,15 +5,22 @@ Array.from(deleteText).forEach((element) => {
 })
 
 
-update.addEventListener('click', _ => {
+deleteButton.addEventListener('click', _ => {
     fetch('/tasks', {
-        method: 'put',
+        method: 'delete',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({
-            task: 'Take dog out'
+            task: 'Groceries'
         })
     })
 })
+    .then(res => {
+        if(res.ok) return res.json()
+    })
+    .then(data => {
+        window.location.reload()
+    })
+
 
 async function deleteTask(){
     const sTask = this.parentNode.childNodes[1].innerText
