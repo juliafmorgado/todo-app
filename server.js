@@ -5,6 +5,7 @@ const { response } = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const connectionString = 'mongodb+srv://kaka:3887@cluster0.eomzavh.mongodb.net/?retryWrites=true&w=majority'
+require('dotenv').config()
 
 
 
