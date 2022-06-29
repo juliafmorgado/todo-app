@@ -63,7 +63,7 @@ app.delete('deleteTask', (req, res) => {
         console.log('Task deleted')
         response.json('Task deleted')
     })
-    .catch(error => console.error(error))
+    .catch(error => console.error)
 })
 
 app.listen(3000, () => {
