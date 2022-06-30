@@ -28,6 +28,14 @@ app.get('/', (req, res) => {
     .catch(error => console.error(error))
 })
 
+// app.get('/', async (req, res) => {
+//     try {
+//         const cursor = await db.collection('tasks').find().toArray()
+//         res.render('index.ejs', { tasks: res})
+//     } catch (error) {
+//         res.status(500).send({message: error.message})
+//     }
+// })
 
 app.post('/tasks', (req, res) => {
     tasksCollection.insertOne(req.body)
