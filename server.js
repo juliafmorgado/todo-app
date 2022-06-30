@@ -38,33 +38,25 @@ app.post('/tasks', (req, res) => {
     .catch(error => console.error(error))
 })
 
-// app.put('/tasks', (req, res) => {
-//     tasksCollection.findOneAndUpdate(
-//         query,
-//         {
-//             $set: {
-//                 task: req.body.task
-//             }
-//         },
-//         {
-//             upsert: true
-//         }
-//     )
-//     .then(result => {
-//         console.log(result);
-//     })
-//     .catch(error => console.error(error))
-// })
-
-app.delete('/tasks', (req, res) => {
-    console.log(req)
-    tasksCollection.findOneAndDelete({task: req.body.task})
-    .then(result => {
-        console.log('Task deleted')
-        res.send('Task deleted')
-    })
-    .catch(error => console.error)
+app.delete('/deleteTask', async (req, res) => {
+    try {
+        const result = await tasksCollection.deleteOne({ task: request.body.task })
+        console.log('DELETED');
+        response.json('Task deleted')
+    } catch (err) {
+        console.error(err);
+    }
 })
+
+// app.delete('/tasks', (req, res) => {
+//     console.log(req)
+//     tasksCollection.findOneAndDelete({task: req.body.task})
+//     .then(result => {
+//         console.log('Task deleted')
+//         res.send('Task deleted')
+//     })
+//     .catch(error => console.error)
+// })
 
 //App listening on the port below
 app.listen(3000, () => {
