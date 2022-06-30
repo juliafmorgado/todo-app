@@ -19,7 +19,7 @@
         <ul class="tasks">
             <% for(let i=0; i< tasks.length; i++){%>
                 <li class='task'>
-                    <span><%= tasks[i].task%></span>
+                    <span class="item"><%= tasks[i].task%></span>
                     <!-- <button id="delete-button">delete</button> -->
                     <i class="fa fa-trash" ></i>
                 </li>
@@ -29,7 +29,7 @@
 
 
 
-    <form action="/tasks" method="post">
+    <form action="/tasks" method="post" class="box">
         <input type="text" placeholder="New Item" name="task" autocomplete="off">
         <button type="submit" name="list" value="Today">+</button>
     </form>

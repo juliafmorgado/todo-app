@@ -4,3 +4,50 @@ html {
     min-height: 1000px;
     font-family: 'Comfortaa', 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
+
+.box{
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgb(0 0 0 / 30%);
+}
+
+#heading{
+    background-color: #85bdf0;
+}
+
+h1{
+    color: white;
+}
+
+
+input[type='text']{
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+}
+
+button{
+    min-height: 20px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #85bdf0;
+    color: #fff;
+    font-size: 30px;
+    border-width: 0;
+}
+
+footer{
+    text-align: center;
+    margin: 0, auto;
+    color: #989b9d;
+}
