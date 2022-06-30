@@ -20,6 +20,7 @@ MongoClient.connect(connectionString)
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(express.static('public'))
 app.use(bodyParser.json())
+app.use(cors())
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
