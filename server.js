@@ -3,7 +3,6 @@ const bodyParser = require('body-parser')
 const req = require('express/lib/request')
 const { response } = require('express')
 const app = express()
-const cors = require('cors')
 const MongoClient = require('mongodb').MongoClient
 const connectionString = 'mongodb+srv://kaka:3887@cluster0.eomzavh.mongodb.net/?retryWrites=true&w=majority'
 const PORT = 3000
@@ -20,7 +19,6 @@ MongoClient.connect(connectionString)
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(express.static('public'))
 app.use(bodyParser.json())
-app.use(cors())
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
