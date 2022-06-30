@@ -5,6 +5,7 @@ const { response } = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const connectionString = 'mongodb+srv://kaka:3887@cluster0.eomzavh.mongodb.net/?retryWrites=true&w=majority'
+const PORT = 3000
 
 var db, collection;
 
@@ -67,7 +68,7 @@ app.delete('/deleteTask', async (req, res) => {
 // })
 
 //App listening on the port below
-app.listen(3000, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log('listening');
 })
 
