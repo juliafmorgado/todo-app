@@ -40,9 +40,9 @@ app.post('/tasks', (req, res) => {
 
 app.delete('/deleteTask', async (req, res) => {
     try {
-        const result = await tasksCollection.deleteOne({ task: request.body.task })
+        const result = await tasksCollection.deleteOne({ task: req.body.taskS })
         console.log('DELETED');
-        response.json('Task deleted')
+        res.json('Task deleted')
     } catch (err) {
         console.error(err);
     }
