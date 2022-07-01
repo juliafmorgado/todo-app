@@ -35,8 +35,15 @@ input[type='text']{
     width: 313px;
 }
 
+.task{
+    list-style-type: none;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+
 button{
-    min-height: 20px;
     width: 50px;
     border-radius: 50%;
     border-color: transparent;
@@ -44,6 +51,10 @@ button{
     color: #fff;
     font-size: 30px;
     border-width: 0;
+}
+
+.fa-trash{
+    color: #85bdf0;
 }
 
 footer{
