@@ -12,6 +12,7 @@
 <ul>
  <li>Defining API operations in terms of HTTP methods</li>
   <li>Using EJS as a template engine</li>
+  <li>How to append/remove child nodes</li>
   <li>Automatically restarting the app with Nodemon</li>
   <li>Maintaining good security practices by loading environment variables from an .env file</li>
  
