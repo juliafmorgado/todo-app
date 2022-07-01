@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c59bf71257.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c59bf71257.js"
+      crossorigin="anonymous"
+    ></script>
     <title>To Do</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="box" id="heading">
-        <h1>Today</h1>
+      <h1>Today</h1>
     </div>
 
     <div class="box">
-        <ul class="tasks">
-            <% for(let i=0; i< tasks.length; i++){%>
-                <li class='task'>
-                    <span class="item"><%= tasks[i].task%></span>
-                    <!-- <button id="delete-button">delete</button> -->
-                    <i class="fa fa-trash" ></i>
-                </li>
-            <% } %>
-        </ul>
+      <ul class="tasks">
+        <% for(let i=0; i< tasks.length; i++){%>
+        <li class="task">
+          <span class="item"><%= tasks[i].task%></span>
+          <!-- <button id="delete-button">delete</button> -->
+          <i class="fa fa-trash"></i>
+        </li>
+        <% } %>
+      </ul>
     </div>
 
-
-
     <form action="/tasks" method="post" class="box">
-        <input type="text" placeholder="New Item" name="task" autocomplete="off">
-        <button type="submit" name="list" value="Today">+</button>
+      <input
+        type="text"
+        placeholder="New Item"
+        name="task"
+        autocomplete="off"
+        required
+        pattern="\S+.*"
+      />
+      <button type="submit" name="list" value="Today">+</button>
     </form>
-
 
     <footer>Copyright 2022 JFM</footer>
 
-
     <script src="/main.js"></script>
-</body>
+  </body>
 </html>

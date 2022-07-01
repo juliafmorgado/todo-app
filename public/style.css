@@ -1,53 +1,72 @@
 html {
-    background-color: #E4E9FD;
-    background-image: -webkit-linear-gradient(65deg, #85bdf0 50%, #cfe6fa 50%);
-    min-height: 1000px;
-    font-family: 'Comfortaa', 'Segoe UI', Tahoma, Verdana, sans-serif;
+  background-color: #e4e9fd;
+  background-image: -webkit-linear-gradient(65deg, #85bdf0 50%, #cfe6fa 50%);
+  min-height: 1000px;
+  font-family: "Comfortaa", "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 
-.box{
-    display: flex;
-    justify-content: center;
-    max-width: 400px;
-    margin: 50px auto;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 5px 5px 15px -5px rgb(0 0 0 / 30%);
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgb(0 0 0 / 30%);
 }
 
-#heading{
-    background-color: #85bdf0;
+#heading {
+  background-color: #85bdf0;
 }
 
-h1{
-    color: white;
+h1 {
+  color: white;
 }
 
-
-input[type='text']{
-    text-align: center;
-    height: 60px;
-    top: 10px;
-    border: none;
-    background: transparent;
-    font-size: 20px;
-    font-weight: 200;
-    width: 313px;
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+  outline: none;
 }
 
-button{
-    min-height: 20px;
-    width: 50px;
-    border-radius: 50%;
-    border-color: transparent;
-    background-color: #85bdf0;
-    color: #fff;
-    font-size: 30px;
-    border-width: 0;
+button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: hsl(209, 78%, 73%);
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-footer{
-    text-align: center;
-    margin: 0, auto;
-    color: #989b9d;
+button:hover {
+  background-color: hsl(209, 78%, 63%);
+}
+
+.fa-trash {
+  opacity: 0;
+  cursor: pointer;
+  color: hsl(0, 67%, 47%);
+}
+
+li:hover .fa-trash {
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  margin: 0, auto;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #4181ba;
 }
