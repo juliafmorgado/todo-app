@@ -11,7 +11,6 @@
 
 <ul>
  <li>Defining API operations in terms of HTTP methods</li>
- <li>Using Async/Await instead of promises</li>
   <li>Using EJS as a template engine</li>
   <li>Automatically restarting the app with Nodemon</li>
   <li>Maintaining good security practices by loading environment variables from an .env file</li>
