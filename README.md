@@ -2,10 +2,29 @@
 
 <img src='https://github.com/juliafmorgado/todo-app/blob/main/app.gif' width='100%'>
 
-<h3 align='center'> To Do App created using Node.js, Express, MongoDB and hosted on Heroku.</h3>
+<h2> Project Context</h2>
 
+<p> The purpose of my To Do app was to push my back-end capabilities by building a simple CRUD app with Node, Express and MongoDB.</p>
 <br>
  
+<h2>What was learned</h2>
+
+<ul>
+ <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+ 
+</ul>
+
+<br>
+
+<h2>Optimizations</h2>
+
+Add more facts on the aliens.
+
+<br>
+
 <h2 align='center'>Techs used</h2>
 <div align='center'>
 <img src='https://github.com/juliafmorgado/readme-assets/blob/main/GitHub%20Profile/Tech%20Skills/HTML.svg' width='10%'>
@@ -17,9 +36,3 @@
  
   
 </div>
-
-<br>
-
-<h2>Optimizations</h2>
-
-Add more facts on the aliens.
