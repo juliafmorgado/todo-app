@@ -1,20 +1,24 @@
 const express = require('express')
+const app = express()
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const req = require('express/lib/request')
 const { response } = require('express')
-const app = express()
 const mongoose = require('mongoose')
 const MongoClient = require('mongodb').MongoClient
-const connectionString = 'mongodb+srv://kaka:3887@cluster0.eomzavh.mongodb.net/?retryWrites=true&w=majority'
+require('dotenv').config()
 const PORT = 3000
 
-var db, collection;
+
+let db, 
+collection,
+connectionString = process.env.DB_STRING;
 
 
 MongoClient.connect(connectionString)
     .then(client => {
     console.log(`Connected to Database`)
-    const db = client.db('to-do-app')
+    db = client.db('to-do-app')
     const tasksCollection = db.collection('tasks')
 
 app.use(bodyParser.urlencoded({ extended: true}))
