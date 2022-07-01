@@ -4,16 +4,16 @@
 
 <h2> Project Context</h2>
 
-<p> The purpose of my To Do app was to push my back-end capabilities by building a simple CRUD app with Node, Express and MongoDB.</p>
+<p> The purpose of my To Do app was to push my back-end capabilities by building a simple CRUD app with Node.js, Express and MongoDB.</p>
 <br>
  
 <h2>What was learned</h2>
 
 <ul>
- <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+ <li>Using Async/Await instead of promises</li>
+  <li>Using EJS as a template engine</li>
+  <li>Automatically restarting the app with Nodemon</li>
+  <li>Loading environment variables from an .env file</li>
  
 </ul>
 
@@ -21,7 +21,7 @@
 
 <h2>Optimizations</h2>
 
-Add more facts on the aliens.
+Add checkboxes to remove item if checkbox is checked.
 
 <br>
 
