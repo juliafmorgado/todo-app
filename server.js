@@ -11,7 +11,7 @@ const PORT = 3000
 
 
 let db, 
-collection,
+tasksCollection,
 connectionString = process.env.DB_STRING;
 
 
@@ -19,7 +19,7 @@ MongoClient.connect(connectionString)
     .then(client => {
     console.log(`Connected to Database`)
     db = client.db('to-do-app')
-    const tasksCollection = db.collection('tasks')
+    tasksCollection = db.collection('tasks')
 
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(express.static('public'))
