@@ -1,8 +1,9 @@
 html {
-    background-color: #E4E9FD;
-    background-image: -webkit-linear-gradient(65deg, #85bdf0 50%, #cfe6fa 50%);
-    min-height: 1000px;
+     min-height: 1000px;
     font-family: 'Comfortaa', 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: #cfe6fa;
+    opacity: 0.5;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #cfe6fa 38px ), repeating-linear-gradient( #85bdf055, #85bdf0 );
 }
 
 .box{
@@ -55,10 +56,11 @@ button{
 
 .fa-trash{
     color: #85bdf0;
+    padding-left: 1rem;
 }
 
 footer{
     text-align: center;
     margin: 0, auto;
-    color: #989b9d;
+    color: #313132;
 }
