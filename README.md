@@ -4,7 +4,7 @@
 
 <h2> Project Context</h2>
 
-<p> The purpose of my To Do app was to push my back-end capabilities by building a simple CRUD app with Node.js, Express and MongoDB.</p>
+<p> The purpose of this To Do app was to push my back-end capabilities by building a simple CRUD app with Node.js, Express and MongoDB.</p>
 <br>
  
 <h2>What was learned</h2>
